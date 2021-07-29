@@ -41,8 +41,10 @@
         let min = 1;
         let starter;
         let stopper;
-
+        let isCorrect = false;
         function startTime() {
+            if(!isCorrect){
+                isCorrect = true;
             starter = setInterval(function() {
                 if (sec <= 9) {
                     document.querySelector('.num2').innerHTML = "0" + sec;
@@ -61,6 +63,7 @@
                 sec++;
 
             }, 500);
+            }
         }
 
         function stopTimer() {
